@@ -25,80 +25,23 @@ body {
     background-color: var(--main-light-color);
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
-    font-style: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
 }
 
 .fullscreen {
     height: calc(100vh - 8rem);
 }
 
-#banner {
-    background-color: var(--main-light-color);
-    background-image: url("media/banner.png");
-    background-size: cover;
-    background-position: top;
-}
-
-#uvod {
-    background-color: var(--main-dark-color);
-    color: var(--light-text-color);
-    padding-left: 1rem;
-}
-
-#uvod .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 25vh;
-}
-
-#uvod .row p {
-    font-size: 6rem;
-    line-height: 6rem;
-}
-
-#uvod .row img {
-    height: 12rem;
-    width: auto;
-    transform: translateY(-10px);
-    margin: 0 2rem;
-}
-
-#uvod .full {
-    font-family: Horizon;
-}
-
-#uvod .empty {
-    font-family: Horizon Outlined;
-}
-
-#harmonogram {
-    background-color: rgba(7, 36, 22, 0.8);
-    color: var(--light-text-color);
-    height: 50vh;
-    background-image: url("media/harmonogram_bgr.png");
-    background-blend-mode: multiply;
-}
-
-#o-akci {
-    color: var(--dark-text-color);
-    height: 100vh;
-}
-
-#kontakty {
-    height: 100vh;
-}
-
-#credits {
-    height: 20vh;
-    background-color: var(--main-dark-color);
-    color: var(--light-text-color);
-}
-
-section {
-    padding: 1rem 2rem 1rem 10rem;
-    position: relative;
+.anchor {
+    display: block;
+    position: absolute;
+    top: -8rem;
+    visibility: hidden;
+    scroll-snap-align: start;
 }
 
 p {
@@ -115,26 +58,7 @@ h1 {
     font-weight: 500;
 }
 
-#o-akci h1 {
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    margin-left: 2rem;
-}
-
-.o-akci-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-}
-
-.o-akci-content div {
-    height: 100%;
-    width: 50%;
-    padding: 0 2rem;
-}
+/* ------------------------ NAVIGATION ------------------------ */
 
 nav {
     z-index: 1000;
@@ -179,6 +103,95 @@ nav ul li a {
     font-weight: 600;
     width: 100%;
 }
+
+/* ------------------------ SECTIONS ------------------------ */
+
+section {
+    padding: 1rem 2rem 1rem 10rem;
+    position: relative;
+}
+
+#banner {
+    background-color: var(--main-light-color);
+    background-image: url("media/banner.png");
+    background-size: cover;
+    background-position: top;
+}
+
+#sec-uvod {
+    background-color: var(--main-dark-color);
+    color: var(--light-text-color);
+    padding-left: 1rem;
+}
+
+#sec-uvod .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+}
+
+#sec-uvod .row p {
+    font-size: 6rem;
+    line-height: 6rem;
+}
+
+#sec-uvod .row img {
+    height: 12rem;
+    width: auto;
+    transform: translateY(-10px);
+    margin: 0 2rem;
+}
+
+#sec-uvod .full {
+    font-family: Horizon;
+}
+
+#sec-uvod .empty {
+    font-family: Horizon Outlined;
+}
+
+#sec-harmonogram {
+    background-color: rgba(7, 36, 22, 0.8);
+    color: var(--light-text-color);
+    height: 50vh;
+    background-image: url("media/harmonogram_bgr.png");
+    background-blend-mode: multiply;
+}
+
+#sec-o-akci {
+    color: var(--dark-text-color);
+}
+
+#sec-o-akci h1 {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    margin-left: 2rem;
+}
+
+.o-akci-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.o-akci-content div {
+    height: 100%;
+    width: 50%;
+    padding: 0 2rem;
+}
+
+
+#credits {
+    height: 20vh;
+    background-color: var(--main-dark-color);
+    color: var(--light-text-color);
+}
+
 
 
 canvas {
