@@ -160,6 +160,37 @@ section {
     background-blend-mode: multiply;
 }
 
+#sec-kontakty p {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    max-width:  50%;
+}
+
+
+#map{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-image: url("media/sklo_1.png");
+    background-size: 25% 25%;
+    padding: 5rem;
+}
+
+#map iframe{
+    position: absolute;
+    flex: 1;
+    top: 5%;
+    left: 5%;
+    height: auto;
+}
+
+
+.socials img {
+    width: 5vh;
+    height: auto;
+}
+
 #sec-o-akci {
     color: var(--dark-text-color);
 }
