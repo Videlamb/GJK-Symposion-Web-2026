@@ -169,20 +169,30 @@ section {
 
 
 #map{
+    margin-left: 55%;
+    margin-top: -20%;
     position: relative;
-    width: 50%;
-    height: 50%;
-    background-image: url("media/sklo_1.png");
-    background-size: 25% 25%;
-    padding: 5rem;
+    display: block;
+    width: 25%;
+    aspect-ratio: 1/1;
+}
+
+#map img{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
 }
 
 #map iframe{
     position: absolute;
-    flex: 1;
-    top: 5%;
-    left: 5%;
-    height: auto;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    aspect-ratio: 1/1;
+    border: none;
 }
 
 
